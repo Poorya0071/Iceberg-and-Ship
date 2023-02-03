@@ -22,7 +22,9 @@ Please note that there are 133 missing data for the inc_angle. We fill these val
 
 ### Part 4: we combine band1 and band2 to generate new band which contains the information from both bands.
 
-### Part 5: we compare the results
+### Part 5: Machine Learning
+
+### Part 6: Conclusion
 
 ### Data Visualization: 
 Let's Visualize the data
@@ -117,6 +119,22 @@ Confusion Matrix:
 
 ![myimage](band_combined.png)
 
-### Part 5 Conclusion:
+# Part 5 Machine Learning: 
 
-The results of the combination of both bands are evident in the decreased loss function and increased accuracy, as well as in the improved confusion matrix.
+Let's see the results for two machine learning classification models.
+
+### Random Forest:
+
+RFC accuracy without scaling 70.51%
+
+RFC accuracy with scaling 69.83%
+
+### Support Vector Machine: 
+
+SVC accuracy without scaling 69.83%
+
+SVC accuracy with scaling 53.90%
+
+# Part 6 Conclusion:
+
+In conclusion, the first finding shows that Deep Learning models perform significantly better than Machine Learning models. Additionally, the combination of both bands resulted in a decrease in the loss function and an increase in accuracy, as reflected in the improved confusion matrix.
