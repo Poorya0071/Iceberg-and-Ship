@@ -26,3 +26,44 @@ Please note that there are 133 missing data for the inc_angle. We fill these val
 
 ### Part 6: we compare the results
 
+## Pat 1: 
+Let's compare the results for band1 and 2 on the original and scaled dataset.
+
+Band1 Original Dataset: 
+Loss : 0.6           
+Accuracy: 80%
+Band2 Original Dataset: 
+Loss : 0.5        
+Accuracy: 77%
+Band1 Scaled Dataset: 
+Loss : 0.38         
+Accuracy: 86%
+Band2 Scaled Dataset: 
+Loss : 0.39         
+Accuracy: 82%
+
+Let's visualize the results by the confuison matrix
+
+Band1 Original Dataset: 
+
+![myimage](band_1_org.png)
+-------------------------------------------
+Band2 Original Dataset: 
+
+![myimage](band_2_org.png)
+-------------------------------------------
+Band1 Scaled Dataset: 
+
+![myimage](band_1_scaled.png)
+-------------------------------------------
+Band2 Scaled Dataset: 
+
+![myimage](band_2_scaled.png)
+-------------------------------------------
+# Part 1 Conclusion:
+According to the results from part 1, Band1 with the scaled dataset has the best performance on the DNN model.
+
+Confusion Matrix Analsys:
+
+The DNN model correctly identified 141 out of 164 Icebergs and misclassified 23 as ships. It also accurately predicted 135 out of 157 ships, but wrongly identified 22 as Icebergs.
+
