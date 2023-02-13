@@ -1,10 +1,21 @@
 # Classification of Ship and IceBerg
 ### Introduction
+
 The Statoil Iceberg Classifier Challenge is a dataset available on Kaggle that provides a unique opportunity to apply deep learning techniques to a real-world problem. The dataset includes images of ships and icebergs, taken from a satellite, and the goal is to classify these images as either a ship or an iceberg.
 
+# Method:
+
+To address this challenge, we followed a multi-step approach. In Part 1, we trained two different Deep Neural Network (DNN) models, one with the original dataset and another with the scaled dataset, to determine which dataset would result in the best performance.
+In Parts 2 and 3, we rotated all the images based on the inc_angle to remove its impact on the model's performance. We filled in the missing values for inc_angle and then dropped them to observe the results.
+In Part 4, we combined the information from Band1 and Band2 to create a new band, which contained information from both bands. 
+In Part 5, we used machine learning algorithms for classification, to compare the deep learning and machine learning models.
+
 ## Road Map
+
 ### Part 1: Band1 or Band2, scaled or orginal data
+
 In part 1, we use DNN for Band1 and 2 on the scaled and original datasets to find which set of data works better.
+
 -Implementing DNN for Band1 on the original dataset
 
 -Implementing DNN for Band1 on the scaled dataset
@@ -14,13 +25,18 @@ In part 1, we use DNN for Band1 and 2 on the scaled and original datasets to fin
 -Implementing DNN for Band2 on the scaled dataset
 
 ### Part 2: Rotate the Images based on the inc_angle
+
 In part 2, we rotate all images based on the inc_angle to remove the impact of the inc_angle.
 
 Please note that there are 133 missing data for the inc_angle. We fill these values with the mean of the inc_angle.
 
-### Part 3: Instead of filling the missing data, we drop them.
+### Part 3: Rotate the Images based on the inc_angle
 
-### Part 4: we combine band1 and band2 to generate new band which contains the information from both bands.
+Instead of filling the missing data, we drop them.
+
+### Part 4: Combine Band1 and Band2:
+
+we combine band1 and band2 to generate new band which contains the information from both bands.
 
 ### Part 5: Machine Learning
 
@@ -134,6 +150,22 @@ RFC accuracy with scaling 69.83%
 SVC accuracy without scaling 69.83%
 
 SVC accuracy with scaling 53.90%
+
+# Results:
+
+The results of our experiments showed that the DNN model performed better with the scaled dataset of Band1 compared to the original dataset. Rotating the images by the specific inc_angle for each image and removing the missing values improved the accuracy of the model. Combining the information from both bands also resulted in an improved accuracy, with over 90% accuracy. However, the traditional machine learning algorithms did not perform as well as the deep learning algorithms.
+
+| Model         | Data            | Loss     | Accuracy      |
+| :------------ |:---------------:| -----:   | :------------ |
+| DNN      | Band1 Original | 0.6    |           80%    |
+| DNN      | Band1 Scaled        |   0.38    |      86%         | 
+| DNN | Band2 Original        |    0.5    |          77%     |
+| DNN | Band2 Scaled        |    0.39    |        82%       |
+| DNN | Rotated and Filled        |    0.43    |      86%         |
+| DNN | Rotated and Droped       |    0.31    |          87%     |
+| RandomForest | Band1        |   ---    |         70.51 %      |
+| SVM | Band1       |  ---      |        69.83%       |     
+| DNN | Band1 + Band2       |    0.28   |        91%       |
 
 # Part 6 Conclusion:
 
